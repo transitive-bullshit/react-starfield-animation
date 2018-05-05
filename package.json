@@ -1,6 +1,6 @@
 {
   "name": "react-starfield-animation",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Canvas-based starfield animation for React.",
   "author": "transitive-bullshit",
   "license": "MIT",
