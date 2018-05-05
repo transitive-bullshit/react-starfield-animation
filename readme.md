@@ -39,7 +39,7 @@ class Example extends Component {
 | Property      | Type               | Default                               | Description                                                                                                                                  |
 |:--------------|:-------------------|:--------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------|
 | `numParticles`  | number           | 300                                  | Number of particles (stars) to use. |
-| `lineWidth`     | number           | 1.0                                  | Line width affecting particle size. |
+| `lineWidth`     | number           | 2.0                                  | Line width affecting particle size. |
 | `alphaFactor`   | number           | 1.0                                  | Scaling factor for particle opacity. |
 | `depth`         | number           | 300                                  | Scaling factor for particle depth. |
 | `...`           | ...              | undefined                            | Any other props are applied to the root canvas element. |
