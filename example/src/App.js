@@ -12,7 +12,10 @@ export default class App extends Component {
         style={{
           background: `url(${background})`,
           backgroundSize: 'stretch',
-          minHeight: '100vh'
+          minHeight: '100vh',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center'
         }}
       >
         <a href='https://github.com/transitive-bullshit/react-starfield-animation'>
@@ -27,6 +30,17 @@ export default class App extends Component {
             }}
           />
         </a>
+
+        <h1
+          style={{
+            color: '#fff',
+            fontSize: '3em',
+            fontFamily: 'Quicksand, "Helvetica Neue", sans-serif',
+            textShadow: '2px 2px 8px rgba(0, 0, 0, 0.5)'
+          }}
+        >
+          React Starfield Animation
+        </h1>
 
         <StarfieldAnimation
           numParticles={400}
