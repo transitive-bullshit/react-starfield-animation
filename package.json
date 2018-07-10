@@ -4,6 +4,7 @@
   "description": "Canvas-based starfield animation for React.",
   "author": "transitive-bullshit",
   "license": "MIT",
+  "reveal": true,
   "repository": "transitive-bullshit/react-starfield-animation",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
