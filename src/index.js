@@ -19,14 +19,16 @@ class StarfieldAnimation extends PureComponent {
     size: PropTypes.shape({
       width: PropTypes.number,
       height: PropTypes.number
-    }).isRequired
+    }).isRequired,
+    style: PropTypes.object
   }
 
   static defaultProps = {
     numParticles: 300,
     alphaFactor: 1,
     lineWidth: 2,
-    depth: 300
+    depth: 300,
+    style: { }
   }
 
   componentWillMount() {
@@ -52,16 +54,24 @@ class StarfieldAnimation extends PureComponent {
       alphaFactor,
       depth,
       size,
+      style,
       ...rest
     } = this.props
 
     return (
-      <canvas
-        ref={this._canvasRef}
-        width={size.width}
-        height={size.height}
+      <div
+        style={{
+          overflow: 'hidden',
+          ...style
+        }}
         {...rest}
-      />
+      >
+        <canvas
+          ref={this._canvasRef}
+          width={size.width}
+          height={size.height}
+        />
+      </div>
     )
   }
 
