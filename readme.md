@@ -2,7 +2,7 @@
 
 > ✨ Canvas-based starfield animation for React.
 
-[![NPM](https://img.shields.io/npm/v/react-starfield-animation.svg)](https://www.npmjs.com/package/react-starfield-animation) [![Build Status](https://travis-ci.org/transitive-bullshit/react-starfield-animation.svg?branch=master)](https://travis-ci.org/transitive-bullshit/react-starfield-animation) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/react-starfield-animation.svg)](https://www.npmjs.com/package/react-starfield-animation) [![Build Status](https://travis-ci.com/transitive-bullshit/react-starfield-animation.svg?branch=master)](https://travis-ci.com/transitive-bullshit/react-starfield-animation) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 [![Demo](https://raw.githubusercontent.com/transitive-bullshit/react-starfield-animation/master/example/demo.gif)](https://transitive-bullshit.github.io/react-starfield-animation/)
 
