@@ -58,3 +58,5 @@ Note that the canvas size will automatically be inferred based on available spac
 MIT © [Travis Fischer](https://github.com/transitive-bullshit)
 
 This module was bootstrapped with [create-react-library](https://github.com/transitive-bullshit/create-react-library).
+
+Support my OSS work by <a href="https://twitter.com/transitive_bs">following me on twitter <img src="https://storage.googleapis.com/saasify-assets/twitter-logo.svg" alt="twitter" height="24px" align="center"></a>
