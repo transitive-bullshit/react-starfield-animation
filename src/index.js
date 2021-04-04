@@ -59,19 +59,16 @@ class StarfieldAnimation extends PureComponent {
     } = this.props
 
     return (
-      <div
-        style={{
-          overflow: 'hidden',
-          ...style
-        }}
-        {...rest}
-      >
         <canvas
           ref={this._canvasRef}
           width={size.width}
           height={size.height}
+          style={{
+            overflow: 'hidden',
+            ...style
+          }}
+          {...rest}
         />
-      </div>
     )
   }
 
@@ -80,6 +77,7 @@ class StarfieldAnimation extends PureComponent {
   }
 
   _tick = () => {
+    this._draw()
     this._update()
     this._draw()
 
@@ -99,11 +97,12 @@ class StarfieldAnimation extends PureComponent {
       alphaFactor,
       lineWidth
     } = this.props
-
+    ctx.lineWidth = lineWidth
+    
     ctx.save()
     ctx.translate(this._vp.x, this._vp.y)
     ctx.clearRect(-this._vp.x, -this._vp.y, this._bounds.width, this._bounds.height)
-    ctx.lineWidth = lineWidth
+    
 
     for (let i = 0; i < this._particles.length; ++i) {
       const p = this._particles[i]
