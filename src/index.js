@@ -59,19 +59,16 @@ class StarfieldAnimation extends PureComponent {
     } = this.props
 
     return (
-      <div
-        style={{
-          overflow: 'hidden',
-          ...style
-        }}
-        {...rest}
-      >
         <canvas
           ref={this._canvasRef}
           width={size.width}
           height={size.height}
+          style={{
+            overflow: 'hidden',
+            ...style
+          }}
+          {...rest}
         />
-      </div>
     )
   }
 
@@ -80,7 +77,8 @@ class StarfieldAnimation extends PureComponent {
   }
 
   _tick = () => {
-    this._update()
+    // this._draw()
+    // this._update()
     this._draw()
 
     this._tickRaf = raf(this._tick)
@@ -100,14 +98,16 @@ class StarfieldAnimation extends PureComponent {
       lineWidth
     } = this.props
 
+    ctx.lineWidth = lineWidth
+    
     ctx.save()
     ctx.translate(this._vp.x, this._vp.y)
     ctx.clearRect(-this._vp.x, -this._vp.y, this._bounds.width, this._bounds.height)
-    ctx.lineWidth = lineWidth
+    
 
     for (let i = 0; i < this._particles.length; ++i) {
       const p = this._particles[i]
-
+      
       p.s = this._bounds.depth / (this._bounds.depth + p.z)
       p.sx = p.x * p.s
       p.sy = p.y * p.s
@@ -118,6 +118,8 @@ class StarfieldAnimation extends PureComponent {
       ctx.lineTo(p.osx, p.osy)
       ctx.strokeStyle = 'hsla(' + p.hue + ', 100%, ' + p.lightness + '%, ' + p.alpha + ')'
       ctx.stroke()
+      
+      p.update()
     }
 
     ctx.restore()
