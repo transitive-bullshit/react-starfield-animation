@@ -77,8 +77,8 @@ class StarfieldAnimation extends PureComponent {
   }
 
   _tick = () => {
-    this._draw()
-    this._update()
+    // this._draw()
+    // this._update()
     this._draw()
 
     this._tickRaf = raf(this._tick)
@@ -97,6 +97,7 @@ class StarfieldAnimation extends PureComponent {
       alphaFactor,
       lineWidth
     } = this.props
+
     ctx.lineWidth = lineWidth
     
     ctx.save()
@@ -106,7 +107,7 @@ class StarfieldAnimation extends PureComponent {
 
     for (let i = 0; i < this._particles.length; ++i) {
       const p = this._particles[i]
-
+      
       p.s = this._bounds.depth / (this._bounds.depth + p.z)
       p.sx = p.x * p.s
       p.sy = p.y * p.s
@@ -117,6 +118,8 @@ class StarfieldAnimation extends PureComponent {
       ctx.lineTo(p.osx, p.osy)
       ctx.strokeStyle = 'hsla(' + p.hue + ', 100%, ' + p.lightness + '%, ' + p.alpha + ')'
       ctx.stroke()
+      
+      p.update()
     }
 
     ctx.restore()
